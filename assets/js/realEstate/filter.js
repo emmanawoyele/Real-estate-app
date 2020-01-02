@@ -119,22 +119,22 @@ return bedrooms.map((item)=>{
   <span className="title">Facilities</span>
   <label htmlFor="extras">
     <span>Elevators</span>
-    <input name="elevator" value="elevator" type="checkbox" onChange={this.props.change}/>
+    <input name="elevator"  type="checkbox" onChange={this.props.change}/>
     </label>
 
     <label htmlFor="extras">
     <span>Swimming Pool</span>
-    <input name="swimming_pool" value="swimming_pool" type="checkbox" onChange={this.props.change}/>
+    <input name="swimming_pool" value={this.props.globalState.pool} type="checkbox" onChange={this.props.change}/>
     </label>
 
     <label htmlFor="extras">
     <span>Basement</span>
-    <input name="Basement"value="Basement" type="checkbox"onChange={this.props.change}/>
+    <input name="Basement" type="checkbox" value={this.props.globalState.basement}onChange={this.props.change}/>
     </label>
 
     <label htmlFor="extras">
     <span>Gym</span>
-    <input name="Gym" value="Gym" type="checkbox" onChange={this.props.change}/>
+    <input name="gym"  type="checkbox" value={this.props.globalState.gym} onChange={this.props.change} />
     </label>
 
 

@@ -20,14 +20,22 @@ class App extends Component {
       max_price: 1000000,
       min_floor_space: 0,
       max_floor_space: 5000000,
-      elavator: false,
-      basement: false,
-      gym: false,
+      
       filteredData:listingsData,
       popluateFormData:'',
       sortby:'price-dsc',
       view:'box',
-      search:''
+      search:'',
+      elevator: false,
+      basement: false,
+      pool:false,
+    gym:false,
+
+          
+      
+      
+    
+      
 
 
      
@@ -40,6 +48,7 @@ class App extends Component {
     this.filteredData=this.filteredData.bind(this)
     this.populateFormData=this.populateFormData.bind(this)
     this.changeView=this.changeView.bind(this)
+    
   
   }
 
@@ -53,7 +62,7 @@ return (a.price - b.price)
     })
   }
 
-  change(event){ //this method is for changing filter
+  change(event){ //this method is for check what was clicked or what changes on the filter
     var name = event.target.name
     var value =(event.target.type==='checkbox')? event.target.checked:event.target.value
 
@@ -66,7 +75,7 @@ return (a.price - b.price)
 
   }
 
-changeView(viewName){ //This method will change the view to eaither lonh or box view
+changeView(viewName){ //This method will change the view to long or box view
   this.setState({
     view:viewName
     
@@ -91,11 +100,31 @@ var newData = this.state.listingsData.filter((item) =>{
   }
 if(this.state.homeType !='All'){
   newData =newData.filter((item)=>{
-    return item.homeType==this.state.homeType
+    return item.homeTypes == this.state.homeType
   })
 
 
   }
+
+
+ if (this.state.gym !=false){
+  newData = newData.filter((item)=>{
+    
+      item.extras.map((item)=>{
+        return item.Gym== this.state.gym
+
+      })
+  
+   })
+  }
+
+
+  //if(this.state.basement !="checked"){
+   // newData =newData.filter((item)=>{
+    
+     /// return item.basement == this.state.basement
+   // })
+ /// }
   if(this.state.sortby=='price-dsc'){
     newData =newData.sort((a,b)=>{
       return a.price-b.price
@@ -123,6 +152,8 @@ this.setState({
 
 
   }
+
+  
  
   populateFormData(){ //This method populate the filter section by gettting data from listingsData.
   //city//

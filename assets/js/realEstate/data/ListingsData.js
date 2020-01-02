@@ -11,7 +11,7 @@ var listingsData =[
 
     extras:[
         'elevator',
-        'gym'
+       
     ],
 
     homeTypes:'Ranch',
@@ -20,14 +20,14 @@ var listingsData =[
 
     {
     address:'42 Lion Road',
-     city:'London',
+    city:'London',
     county:'West Sussex',
     price: 8000000,
     floorSpace:4000,
 rooms: 4,
     extras:[
         'elevator',
-        'gym'
+        
     ],
 
     homeTypes:'House',
@@ -43,7 +43,7 @@ rooms: 4,
     rooms:7,
     extras:[
         'elevator',
-        'gym'
+        
     ],
 
     homeTypes:'Flat',
@@ -61,7 +61,7 @@ rooms: 4,
 
     extras:[
         'elevator',
-        'gym'
+        'Gym'
     ],
 
     homeTypes:'House',
@@ -69,8 +69,8 @@ rooms: 4,
     },
 
     {
-    address:'10 Dale road',
-    city:'Hailsham',
+    address:'29 woods road',
+    city:'Britsol',
     county:'Wealden',
   
     price:550000,
@@ -78,7 +78,7 @@ rooms: 4,
      rooms:5,
     extras:[
         'elevator',
-        'gym'
+        
     ],
 
     homeTypes:'Cottage',
@@ -86,7 +86,7 @@ rooms: 4,
     },
     
     {
-    address:'10 Dale road',
+    address:'11 Keysighton road',
     city:'Brighton',
     county:'South bath',
   
@@ -95,7 +95,7 @@ rooms: 4,
      rooms:4,
     extras:[
         'elevator',
-        'gym'
+        'Gym'
     ],
 
     homeTypes:'House',
@@ -104,7 +104,7 @@ rooms: 4,
 
 
     {
-        address:'10 Dale road',
+        address:'22 Knight road',
         city:'Liverpool',
     county:'kent',
    
@@ -113,7 +113,7 @@ rooms: 4,
     rooms:6,
     extras:[
         'elevator',
-        'gym'
+        'Gym'
     ],
 
     homeTypes:'Flat',
